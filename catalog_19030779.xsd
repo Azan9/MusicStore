@@ -1,0 +1,116 @@
+<!--schema start-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!--musicStore is Root Element-->
+	<xs:element name="musicStore">
+		<xs:complexType>      
+			<xs:sequence>
+				<!--Element storeTitle contains the logo and Name of the store which are of type string-->
+				<xs:element name="storeTitle">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="storeLogo" type="xs:string"/>
+							<xs:element name="storeName" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<!--Element storeTitle contains the informations about the store which are of types string and integers-->
+				<xs:element name="storeInfo">
+					<xs:complexType mixed="true">
+						<xs:sequence>
+							<xs:element name="storeAddress" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="storeContact" type="xs:integer"/>
+							<xs:element name="storeWebsite">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:anyURI">
+											<!--describing the attribute named type-->
+											<xs:attribute name="type" type="xs:string"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<!--describing the attribute named infoType-->
+						<xs:attribute name="infoType" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<!--Element storeMenu contains the menu list which are of type string-->
+				<xs:element name="storeMenu" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="menuMusic" type="xs:string"/>
+							<xs:element name="menuVideo" type="xs:string"/>
+							<xs:element name="menuAlbum" type="xs:string"/>
+							<xs:element name="menuAbout" type="xs:string"/>
+							<xs:element name="menuContact" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<!--Element storCatalogue describes the music catalogue which is of type string-->
+				<xs:element name="storeCatalogue"  type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<!--Element songs contains lists of songs -->
+				<xs:element name="songs">
+					<xs:complexType>
+						<xs:sequence>
+							<!--Element song contains information about the song which are of type string-->
+							<xs:element name="song" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType mixed="true">                               
+									<xs:sequence> 
+										<xs:element name="songOne" type="xs:string" minOccurs="0"/>
+										<xs:element name="songTwo" type="xs:string" minOccurs="0"/>
+										<xs:element name="songThree" type="xs:string" minOccurs="0"/>
+										<xs:element name="songFour" type="xs:string" minOccurs="0"/>
+										<xs:element name="songFive" type="xs:string" minOccurs="0"/>
+										<xs:element name="songSix" type="xs:string" minOccurs="0"/>
+										<xs:element name="songName" type="xs:string"/>
+										<xs:element name="songArtist" type="xs:string"/>
+										<xs:element name="songGenre">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<!--describing the attributes named type and gId-->
+														<xs:attribute name="type"  type="xs:string" use="required"/>
+														<xs:attribute name="gId" type="xs:string" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="songReleaseDate" type="xs:string"/>
+										<xs:element name="songWriter" type="xs:string"/>
+										<xs:element name="songDirector" type="xs:string"/>
+										<xs:element name="songProducer" type="xs:string"/>
+										<xs:element name="songBandMembers" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<!--describing the attribute named bandId-->
+														<xs:attribute name="bandId"  type="xs:string" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="songDescription" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<!--describing the attribute named descriptionId-->
+														<xs:attribute name="descriptionId" type="xs:string" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>    
+									<!--describing the attributes named songId and genreId-->
+									<xs:attribute name="songId" type="xs:string" use="required"/>
+									<xs:attribute name="genreId" type="xs:string" use="required"/>                                                         
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<!--Element storeFooter contains the footer of the page-->
+				<xs:element name="storeFooter" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

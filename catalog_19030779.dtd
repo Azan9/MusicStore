@@ -1,0 +1,55 @@
+<!--musicStore is the root element, it stores 6 child elements data-->
+<!ELEMENT musicStore (storeTitle, storeInfo, storeMenu?, storeCatalogue?, songs, storeFooter?)>
+<!--Element storeTitle stores two child elements which are of type 'EMPTY' and '#PCDATA' respectively-->
+<!ELEMENT storeTitle (storeLogo, storeName)>
+<!ELEMENT storeLogo EMPTY>				
+<!ELEMENT storeName (#PCDATA)>
+<!--element storeTitle describes the store information, it stores three child elements data which are of type '#PCDATA'-->
+<!ELEMENT storeInfo (storeAddress?,storeContact+,storeWebsite)>
+<!ELEMENT storeAddress (#PCDATA)>
+<!ELEMENT storeContact (#PCDATA)>
+<!ELEMENT storeWebsite (#PCDATA)>
+<!--element storeMenu describes the menu, it stores six child elements data which are of type '#PCDATA'-->
+<!ELEMENT storeMenu (menuMusic, menuVideo, menuAlbum, menuAbout, menuContact)>
+<!ELEMENT menuMusic (#PCDATA)>
+<!ELEMENT menuVideo (#PCDATA)>
+<!ELEMENT menuAlbum (#PCDATA)>
+<!ELEMENT menuAbout (#PCDATA)>
+<!ELEMENT menuContact (#PCDATA)>
+<!--element storeCatalogue describes the music catalogue, it stores data of type '#PCDATA'-->
+<!ELEMENT storeCatalogue (#PCDATA)>
+<!--element storeMenu describes the songs, it stores one child element data-->
+<!ELEMENT songs (song+)>
+<!--element song describes the information about the song, it contains 10 child elements which are of type 'EMPTY', #PCDATA' and 'ANY'-->
+<!ELEMENT song ((songOne|songTwo|songThree|songFour|songFive|songSix), songName, songArtist, songGenre, songReleaseDate, songWriter, songDirector, songProducer,songBandMembers?,songDescription?)>
+<!ELEMENT songOne EMPTY>
+<!ELEMENT songTwo EMPTY>
+<!ELEMENT songThree EMPTY>
+<!ELEMENT songFour EMPTY>
+<!ELEMENT songFive EMPTY>
+<!ELEMENT songSix EMPTY>
+<!ELEMENT songName (#PCDATA)>
+<!ELEMENT songArtist (#PCDATA)>
+<!ELEMENT songGenre (#PCDATA)>
+<!ELEMENT songReleaseDate (#PCDATA)>
+<!ELEMENT songWriter (#PCDATA)>
+<!ELEMENT songDirector (#PCDATA)>
+<!ELEMENT songProducer (#PCDATA)>
+<!ELEMENT songBandMembers (#PCDATA)>
+<!ELEMENT songDescription ANY>
+<!ELEMENT storeFooter (#PCDATA)>
+
+<!--element musicStore contains schema attributes, the attributes are of type 'CDATA' and the values are '#REQUIRED'-->
+<!ATTLIST musicStore xmlns:xsi CDATA #REQUIRED xsi:noNamespaceSchemaLocation CDATA '#REQUIRED'>
+<!--element storeInfo contains attribute infoType, the attribute is of type 'CDATA' and the value is '#FIXED'-->
+<!ATTLIST storeInfo infoType CDATA #FIXED "About">
+<!--element storeWebsite contains attribute type, the attribute is of type 'CDATA' and the value is '#IMPLIED'-->
+<!ATTLIST storeWebsite type CDATA #IMPLIED>
+<!--element song contains attribute songId and genreId, the attributes are of type 'CDATA' and 'ID' and the values are '#REQUIRED'-->
+<!ATTLIST song songId CDATA #REQUIRED genreId ID #REQUIRED>
+<!--element songGenre contains attribute type and gId, the attributes are of type 'CDATA' IDREF' and the values are 'REQUIRED' and '#IMPLIED'-->
+<!ATTLIST songGenre type CDATA #REQUIRED gId IDREF #IMPLIED>
+<!--element songBandMembers contains attribute bandID, the attribute is of type 'ID' and the value is '#IMPLIED'-->
+<!ATTLIST songBandMembers bandId ID #IMPLIED>
+<!--element songDescription contains attribute descriptionId, the attribute is of type 'CDATA' and the value is '#IMPLIED'-->
+<!ATTLIST songDescription descriptionId CDATA #IMPLIED>

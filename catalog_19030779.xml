@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Linking XML to CSS-->
+<?xml-stylesheet type="text/css" href="catalog_19030779.css"?>
+<!--Referencing external dtd-->
+<!DOCTYPE musicStore SYSTEM "catalog_19030779.dtd">
+<!--Decalring Root element musicStore and Referencing external schema-->
+<musicStore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalog_19030779.xsd">
+	<!--Describing the store title along with a logo for the store-->
+	<storeTitle>
+		<storeLogo></storeLogo>
+		<storeName>Azan's Music Store</storeName>
+	</storeTitle>
+	<!--Describing information about the store like its address, contact, etc-->
+	<storeInfo infoType="About">
+		<storeAddress>Kathmandu, Nepal</storeAddress>
+		<storeContact>9803055257</storeContact>
+		<storeWebsite type="url">www.azansmusicstore.com</storeWebsite>
+	</storeInfo>
+	<!--Menu of the page-->
+	<storeMenu>
+		<menuMusic>Music</menuMusic>
+		<menuVideo>Videos</menuVideo>
+		<menuAlbum>Albums</menuAlbum>
+		<menuAbout>About</menuAbout>
+		<menuContact>Contact</menuContact>
+	</storeMenu>
+	<!--Creating a Music catalogue title to indicate the beginning of the songs list-->
+	<storeCatalogue>Music Catalogue</storeCatalogue>
+	<!--Songs in the store-->
+	<songs>
+		<!--Describing the information about the song like its name, artist name, genre, release date, writer, director, etc-->
+		<song songId="S01" genreId="G01">
+			<songOne></songOne>
+			<songName>Thriller</songName>
+			<songArtist>Artist: Michael Jackson</songArtist>
+			<songGenre type="Popular Music" gId="G01">Genre: Pop</songGenre>
+			<songReleaseDate>Release Date: December 2, 1983</songReleaseDate>
+			<songWriter>Writer(s): John Landis</songWriter>
+			<songDirector>Director: John Landis</songDirector>
+			<songProducer>Producer: George Folsey Jr</songProducer>
+			<songBandMembers bandId="B01">Band Members: Michael Boddicker, Bruce Cannon, Leon Chancler</songBandMembers>
+			<songDescription descriptionId="D01">
+				<![CDATA[
+				Description: "Thriller" is a single by American singer Michael Jackson. It was released as a single by Epic Records in November 1983 in the UK, and on January 23, 1984 in the U.S.
+				]]>
+			</songDescription>
+		</song>
+		<!--Describing the information about the song like its name, artist name, genre, release date, writer, director, etc-->
+		<song songId="S02" genreId="G02">
+			<songTwo></songTwo>
+			<songName>Absolutely Everybody</songName>
+			<songArtist>Artist: Vanessa Amorosi</songArtist>
+			<songGenre type="Jazz Music" gId="G02">Genre: Jazz</songGenre>
+			<songReleaseDate>Release Date: November 15, 1999</songReleaseDate>
+			<songWriter>Writer(s): Mark Holden</songWriter>
+			<songDirector>Director: Axel Breitung</songDirector>
+			<songProducer>Producer: Axel Breitung </songProducer>
+			<songBandMembers bandId="B02">Band Members: Anthony John Hicks, James Roy Ingram</songBandMembers>
+			<songDescription descriptionId="D02">
+				<![CDATA[	
+				Description: "Absolutely Everybody" is a song by Vanessa Amorosi, released as the second single from her debut album, The Power, on 15 November 1999 by Transistor Music Australia. 
+				]]>
+			</songDescription>
+		</song>
+		<!--Describing the information about the song like its name, artist name, genre, release date, writer, director, etc-->
+		<song songId="S03" genreId="G03">
+			<songThree></songThree>
+			<songName>Perfect</songName>
+			<songArtist>Artist: Ed Sheeran</songArtist>
+			<songGenre type="Country Music," gId="G03">Genre: Country</songGenre>
+			<songReleaseDate>Release Date: September 26, 2017</songReleaseDate>
+			<songWriter>Writer(s): Ed Sheeran</songWriter>
+			<songDirector>Director: Will Hicks</songDirector>
+			<songProducer>Producer: Will Hicks</songProducer>
+			<songBandMembers bandId="B03">Band Members: Roger Meadows Taylor, Ed Sheeran</songBandMembers>
+			<songDescription descriptionId="D03">
+				<![CDATA[
+				Description: Perfect" is a song by English singer-songwriter Ed Sheeran from his third album. After the album's release, it charted at number four on the UK Singles Chart.
+				]]>
+			</songDescription>
+		</song>	
+		<!--Describing the information about the song like its name, artist name, genre, release date, writer, director, etc-->	
+		<song songId="S04" genreId="G04">
+			<songFour></songFour>
+			<songName>Bohemian Rhapsody</songName>
+			<songArtist>Artist: Queen</songArtist>
+			<songGenre type="Rock Music" gId="G04">Genre: Progressive rock</songGenre>
+			<songReleaseDate>Release Date: October 31, 1975</songReleaseDate>
+			<songWriter>Writer(s): Freddie Mercury</songWriter>
+			<songDirector>Director: Roy Thomas Baker</songDirector>
+			<songProducer>Producer: Roy Thomas Baker</songProducer>
+			<songBandMembers bandId="B04">Band Members: Brian May, Roger Taylor, John Deacon</songBandMembers>
+			<songDescription descriptionId="D04">
+				<![CDATA[
+				Description: "Bohemian Rhapsody" is a song by the British rock band Queen. It was written by Freddie Mercury. for the band's 1975 album A Night at the Opera. 
+				]]>
+			</songDescription>
+		</song>
+		<!--Describing the information about the song like its name, artist name, genre, release date, writer, director, etc-->
+		<song songId="S05" genreId="G05">
+			<songFive></songFive>
+			<songName>Here Without You</songName>
+			<songArtist>Artist: 3 Doors Down</songArtist>
+			<songGenre type="Classical Music" gId="G05">Genre: Classical</songGenre>
+			<songReleaseDate>Release Date: August 11, 2003</songReleaseDate>
+			<songWriter>Writer(s): Brad Arnold, Todd Harrell</songWriter>
+			<songDirector>Director: Chris Henderson</songDirector>
+			<songProducer>Producer: Rick Parashar</songProducer>
+			<songBandMembers bandId="B05">Band Members: Brad Arnold, Chris Henderson, Greg Upchurch</songBandMembers>
+			<songDescription descriptionId="D05">
+				<![CDATA[
+				Description: "Here Without You" is a song by American rock band 3 Doors Down. It was released on August 11,  2003, from the second studio album Away from the Sun (2002).
+				]]>
+			</songDescription>
+		</song>
+		<!--Describing the information about the song like its name, artist name, genre, release date, writer, director, etc-->
+		<song songId="S06" genreId="G06">
+			<songSix></songSix>
+			<songName>Hallelujah</songName>
+			<songArtist>Artist: Leonard Cohen</songArtist>
+			<songGenre type="Folk Music" gId="G06">Genre: Folk rock</songGenre>
+			<songReleaseDate>Release Date: December 14, 1984</songReleaseDate>
+			<songWriter>Writer(s): Leonard Cohen</songWriter>
+			<songDirector>Director: Spike Jonze</songDirector>
+			<songProducer>Producer: John Lissauer</songProducer>
+			<songBandMembers bandId="B06">Band Members: Roscoe Beck, Neil Larsen, Leonard Cohen</songBandMembers>
+			<songDescription descriptionId="D06">
+				<![CDATA[
+				Description: "Hallelujah" is a song written by Canadian singer Leonard Cohen. Achieving little initial success, the song found acclaim through a recording by John Cale.
+				]]>
+			</songDescription>
+		</song>
+	</songs>
+	<!--Describing the footer of the page!-->
+	<storeFooter>Copyright &#xA9; Azan Ahmed Siddique 2021</storeFooter>
+</musicStore>
